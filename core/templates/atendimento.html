@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="col-xs-12 col-md-6 col-md-offset-3">
+	<form action="" method="POST">
+	 {% csrf_token %}
+	 {{form}}
+	 {# {% render_field form.nome class="customizado" placeholder=texto %} #}
+	 
+		
+		<input type="submit" value="Confirmar" >
+	</form>
+
+	<h3>Preco:</h3>
+
+	<div id="preco">	
+		<h3>0</h3>
+	</div>
+</div>
+{% endblock %}

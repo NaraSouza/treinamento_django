@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head><title></title></head>
+	
+	<body>
+		{% block menu %}
+		<ul>
+			<li><a href="{% url 'home' %}">Home</a></li>
+			<li><a href="{% url 'atendimento' %}">Serviços</a></li>
+			<li><a href="{% url 'cadastro' %}">Cadastre-se</a></li>
+			<li><a href="{% url 'login' %}">Login</a></li>
+			<li><a href="{% url 'cadastrar_animal'%}">Cadastrar Animal</a></li>
+			<li><h3>{{request.user.username}}</h3></li>
+			<li><a href="{% url 'logout' %}">Logout</a></li>
+		</ul>	
+		{% endblock %}
+
+		{% block content %}
+		{% endblock %}
+	</body>
+</html>

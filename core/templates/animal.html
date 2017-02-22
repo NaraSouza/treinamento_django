@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load widget_tweaks crispy_forms_tags %}
+
+{% block content %}
+<div class="col-xs-12 col-md-6 col-md-offset-3">
+	<form action="" method="POST">
+	 {% csrf_token %}
+	 {{form | crispy}}
+	 {# {% render_field form.nome class="customizado" placeholder=texto %} #}
+	 
+		
+		<input type="submit" value="Enviar" >
+	</form>
+</div>
+{% endblock %}
